@@ -24,6 +24,7 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status))
     app.run_polling()
+    app.add_handler(CommandHandler("izle", izle))
   async def izle(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "🚆 Tbilisi → Bakı bilet izləmə siyahısı\n\n"
